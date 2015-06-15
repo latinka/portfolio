@@ -3007,7 +3007,7 @@ select[multiple].form-group-lg .form-control {
 .btn:hover,
 .btn:focus,
 .btn.focus {
-  color: #333333;
+  color: #ff3d00;
   text-decoration: none;
 }
 .btn:active,
@@ -3028,9 +3028,9 @@ fieldset[disabled] .btn {
   box-shadow: none;
 }
 .btn-default {
-  color: #333333;
+  color: #ff3d00;
   background-color: #ffffff;
-  border-color: #cccccc;
+  border-color: #ff3d00;
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -3038,9 +3038,9 @@ fieldset[disabled] .btn {
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  color: #333333;
+  color: #ff3d00;
   background-color: #e6e6e6;
-  border-color: #adadad;
+  border-color: #c22e00;
 }
 .btn-default:active,
 .btn-default.active,
@@ -3066,11 +3066,11 @@ fieldset[disabled] .btn-default:active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
   background-color: #ffffff;
-  border-color: #cccccc;
+  border-color: #ff3d00;
 }
 .btn-default .badge {
   color: #ffffff;
-  background-color: #333333;
+  background-color: #ff3d00;
 }
 .btn-primary {
   color: #ffffff;
@@ -6583,4 +6583,21 @@ body {
   text-transform: uppercase;
   font-size: 35px;
   animation-delay: 1.6s;
+}
+.jumbotron .centered {
+  text-align: center;
+}
+.jumbotron .btn {
+  border: 2px solid #ff3d00;
+  text-transform: uppercase;
+  animation-delay: 1.7s;
+  color: #ff3d00;
+  border-radius: 8px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  width: 15em;
+}
+.jumbotron .btn:hover {
+  color: #fff;
+  background-color: #ff3d00;
 }
