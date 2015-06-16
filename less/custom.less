@@ -18,8 +18,9 @@ html, body {
 	height: 100%;
 }
 .jumbotron {
-	position: relative;
-	background: url(../img/jumbotron-bg.jpg) no-repeat center center;
+	position: relative; 
+	padding-top: 20px;
+	background-color: #152737;
 	width: 100%;
 	height: 100%;
 	background-size: cover;
@@ -30,39 +31,124 @@ html, body {
 		display: inline;
 	}
 
-	h1 {
-		font-family: 'Arvo';
-		font-size: (@font-size-base*5.8);
-		margin-bottom: 0.4em;
-		-webkit-animation-delay: 1.7s;
-		animation-delay: 1.7s;
-    }
-
     h2 {
     	text-transform: uppercase;
+    	color: #fff;
+    	margin-bottom: 30px;
     	font-size: (@font-size-base*2.5);
     	-webkit-animation-delay: 1.6s;
     	animation-delay: 1.6s;
+    	font-size: 40px;
+    }
+}
+
+.network {
+    	width: 100%;
+    	height: 160px;
+    	margin-top: 50px;
+    	background-image: url(../img/beehive.svg), radial-gradient(200px 500px at center, @brand-secondary 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0));
+    	background-size: 100%, 50% 100%;
+    	background-position: 0 60%, 0 100%;
+    	-webkit-animation: move 5s linear infinite;
+    	animation: move 5s linear infinite;
     }
 
-    .centered {
-    	text-align: center;
-    }
+@keyframes move {
+	0% {
+		background-position: 0 60%, 0 50%;
+	}
+	100% {
+		background-position: 0 60%, 100% 50%;
+	}
+}
 
-    .btn {
+@-webkit-keyframes move {
+	0% {
+		background-position: 0 60%, 0 50%;
+	}
+	100% {
+		background-position: 0 60%, 100% 50%;
+	}
+}
+
+.navbar {
+	text-align: center;
+	background-color: #152737;
+	border-radius: 0;
+	margin-bottom: 0;
+	padding-top: 40px;
+
+	.btn {
+		position: absolute;
+		top: 40px;
+		right: 50px;
     	border: 2px solid @brand-secondary;
     	text-transform: uppercase;
     	-webkit-animation-delay: 2s;
     	animation-delay: 2s;
     	color: @brand-secondary;
     	border-radius: 8px;
-    	font-family: 'Roboto';
-    	font-weight: 500;
-    	width: 15em;
+    	font-family: 'Roboto Condensed';
+    	font-size: 20px;
     }
 
     .btn:hover {
 		color: #fff;
 		background-color: @brand-secondary;
+
     }
+
+    .btn:hover:before {
+    	visibility: hidden;;
+    }
+
+    ul {
+    	padding-top: 6px;
+    	width: 100%;
+    	color: #fff;
+    	text-align: center;
+    	font-family: 'Roboto Condensed';
+    	font-size: 22px;
+    	text-transform: uppercase;
+    	-webkit-animation-delay: 1.7s;
+    	animation-delay: 1.7s;
+
+    }
+
+    li {
+    	display: inline-block;
+    	margin-right: 60px;
+    }
+
+    a {
+    	position: relative;
+    	color: #fff;
+    	text-decoration: none;
+    }
+
+    a:before {
+    	content: "";
+    	position: absolute;
+    	width: 100%;
+    	height: 2px;
+    	bottom: 0;
+    	left: 0;
+    	background-color: @brand-secondary;
+    	visibility: hidden;
+    	-webkit-transform: scaleX(0);
+  		transform: scaleX(0);
+  		-webkit-transition: all 0.3s ease-in-out 0s;
+  		transition: all 0.3s ease-in-out 0s;
+    }
+
+	a:hover:before {
+		visibility: visible;
+		-webkit-transform: scaleX(1);
+  		transform: scaleX(1);
+	}
+}
+
+.container-fluid {
+	padding-left: 60px;
+	padding-right: 60px;
 }

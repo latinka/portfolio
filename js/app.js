@@ -5,6 +5,9 @@ var ogg = {myProp:0};
 
 $(window).load(function() {
 	$(".loader").fadeOut("slow");
+});
+
+$(document).ready(function(){
 	getPage();
   	init();
 });

@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
-@import url(http://fonts.googleapis.com/css?family=Arvo:700);
+@import url(http://fonts.googleapis.com/css?family=Nova+Mono);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -1178,8 +1178,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Oswald';
-  font-weight: 700;
+  font-family: 'Nova Mono';
+  font-weight: 400;
   line-height: 1.1;
   color: inherit;
 }
@@ -6572,7 +6572,8 @@ body {
 }
 .jumbotron {
   position: relative;
-  background: url(../img/jumbotron-bg.jpg) no-repeat center center;
+  padding-top: 20px;
+  background-color: #152737;
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -6582,34 +6583,108 @@ body {
   text-align: center;
   display: inline;
 }
-.jumbotron h1 {
-  font-family: 'Arvo';
-  font-size: 81.2px;
-  margin-bottom: 0.4em;
-  -webkit-animation-delay: 1.7s;
-  animation-delay: 1.7s;
-}
 .jumbotron h2 {
   text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 30px;
   font-size: 35px;
   -webkit-animation-delay: 1.6s;
   animation-delay: 1.6s;
+  font-size: 40px;
 }
-.jumbotron .centered {
+.network {
+  width: 100%;
+  height: 160px;
+  margin-top: 50px;
+  background-image: url(../img/beehive.svg), radial-gradient(200px 500px at center, #ff3d00 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0));
+  background-size: 100%, 50% 100%;
+  background-position: 0 60%, 0 100%;
+  -webkit-animation: move 5s linear infinite;
+  animation: move 5s linear infinite;
+}
+@keyframes move {
+  0% {
+    background-position: 0 60%, 0 50%;
+  }
+  100% {
+    background-position: 0 60%, 100% 50%;
+  }
+}
+@-webkit-keyframes move {
+  0% {
+    background-position: 0 60%, 0 50%;
+  }
+  100% {
+    background-position: 0 60%, 100% 50%;
+  }
+}
+.navbar {
   text-align: center;
+  background-color: #152737;
+  border-radius: 0;
+  margin-bottom: 0;
+  padding-top: 40px;
 }
-.jumbotron .btn {
+.navbar .btn {
+  position: absolute;
+  top: 40px;
+  right: 50px;
   border: 2px solid #ff3d00;
   text-transform: uppercase;
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
   color: #ff3d00;
   border-radius: 8px;
-  font-family: 'Roboto';
-  font-weight: 500;
-  width: 15em;
+  font-family: 'Roboto Condensed';
+  font-size: 20px;
 }
-.jumbotron .btn:hover {
+.navbar .btn:hover {
   color: #fff;
   background-color: #ff3d00;
+}
+.navbar .btn:hover:before {
+  visibility: hidden;
+}
+.navbar ul {
+  padding-top: 6px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  text-transform: uppercase;
+  -webkit-animation-delay: 1.7s;
+  animation-delay: 1.7s;
+}
+.navbar li {
+  display: inline-block;
+  margin-right: 60px;
+}
+.navbar a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+.navbar a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff3d00;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.navbar a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.container-fluid {
+  padding-left: 60px;
+  padding-right: 60px;
 }
