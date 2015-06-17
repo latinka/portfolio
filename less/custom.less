@@ -14,116 +14,46 @@
 	z-index: 999999;
 	pointer-events: none;
 }
-html, body {
-	height: 100%;
-}
-.jumbotron {
-	position: relative; 
-	padding-top: 20px;
-	background-color: #152737;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	overflow: hidden;
 
-	.container {
-		text-align: center;
-		display: inline;
-	}
-
-    h2 {
-    	text-transform: uppercase;
-    	color: #fff;
-    	margin-bottom: 30px;
-    	font-size: (@font-size-base*2.5);
-    	-webkit-animation-delay: 1.6s;
-    	animation-delay: 1.6s;
-    	font-size: 40px;
-    }
-}
-
-.network {
-    	width: 100%;
-    	height: 160px;
-    	margin-top: 50px;
-    	background-image: url(../img/beehive.svg), radial-gradient(200px 500px at center, @brand-secondary 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0));
-    	background-size: 100%, 50% 100%;
-    	background-position: 0 60%, 0 100%;
-    	-webkit-animation: move 5s linear infinite;
-    	animation: move 5s linear infinite;
-    }
-
-@keyframes move {
-	0% {
-		background-position: 0 60%, 0 50%;
-	}
-	100% {
-		background-position: 0 60%, 100% 50%;
-	}
-}
-
-@-webkit-keyframes move {
-	0% {
-		background-position: 0 60%, 0 50%;
-	}
-	100% {
-		background-position: 0 60%, 100% 50%;
-	}
-}
-
-.navbar {
-	text-align: center;
+.navbar-default {
 	background-color: #152737;
 	border-radius: 0;
 	margin-bottom: 0;
 	padding-top: 40px;
+	border: none;
 
-	.btn {
-		position: absolute;
-		top: 40px;
-		right: 50px;
-    	border: 2px solid @brand-secondary;
-    	text-transform: uppercase;
-    	-webkit-animation-delay: 2s;
-    	animation-delay: 2s;
-    	color: @brand-secondary;
-    	border-radius: 8px;
-    	font-family: 'Roboto Condensed';
-    	font-size: 20px;
-    }
-
-    .btn:hover {
-		color: #fff;
-		background-color: @brand-secondary;
-
-    }
-
-    .btn:hover:before {
-    	visibility: hidden;;
-    }
-
-    ul {
+	
+    .navbar-nav {
     	padding-top: 6px;
     	width: 100%;
-    	color: #fff;
     	text-align: center;
     	font-family: 'Roboto Condensed';
-    	font-size: 22px;
+    	font-size: 20px;
     	text-transform: uppercase;
     	-webkit-animation-delay: 1.7s;
     	animation-delay: 1.7s;
 
+    	li {
+    		float: none;
+	    	color: #fff;
+	    	display: inline-block;
+	    	margin-right: 30px;
+
+    	a {
+	    	position: relative;
+	    	color: #fff;
+	    	text-decoration: none;
+    	}
+
+    	a:hover {
+    		color: #fff;
+    	}
+
+    	a:visited {
+    		color: #fff;
+    	}
     }
 
-    li {
-    	display: inline-block;
-    	margin-right: 60px;
-    }
-
-    a {
-    	position: relative;
-    	color: #fff;
-    	text-decoration: none;
     }
 
     a:before {
@@ -146,9 +76,170 @@ html, body {
 		-webkit-transform: scaleX(1);
   		transform: scaleX(1);
 	}
+
+	.navbar-right {
+
+		.btn {
+			position: absolute;
+			top: 40px;
+			right: 50px;
+	    	border: 2px solid @brand-secondary;
+	    	text-transform: uppercase;
+	    	-webkit-animation-delay: 2s;
+	    	animation-delay: 2s;
+	    	background-color: @brand-primary;
+	    	border-radius: 8px;
+	    	font-family: 'Roboto Condensed';
+	    	font-size: 20px;
+	    }
+
+    	.btn:hover {
+			background-color: @brand-secondary;
+
+    	}	
+
+    	a {
+    		color: @brand-secondary;
+    	}
+
+    	a:hover {
+    		color: #fff;
+    		text-decoration: none;
+    	}
+
+    	a:hover:before {
+    		visibility: hidden;;
+    	}
+
+
+	}
+
+	.navbar-toggle {
+		border: none;
+
+		.icon-bar {
+			width: 40px;
+			height: 3px;
+			background-color: @brand-secondary;
+		}
+
+		
+	} 
+
+	.navbar-toggle:hover {
+		background-color: @brand-secondary;
+
+		.icon-bar {
+			background-color: @brand-primary;
+		}
+	}
+
+	.icon-bar + .icon-bar {
+    	margin-top: 10px;
+  	}
+
 }
 
-.container-fluid {
-	padding-left: 60px;
-	padding-right: 60px;
+.jumbotron { 
+
+    h2 {
+    	text-transform: uppercase;
+    	color: #fff;
+    	margin-top: 30px;
+    	margin-bottom: 30px;
+    	font-size: (@font-size-base*3.5);
+    	-webkit-animation-delay: 1.6s;
+    	animation-delay: 1.6s;
+    }
 }
+
+.jumbotron-hero {
+	padding-top: 150px;
+	background-color: @brand-primary;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	overflow: hidden;
+	margin-bottom: 0;
+}
+
+.network {
+    	width: 100%;
+    	height: 160px;
+    	margin-top: 70px;
+    	background-image: url(../img/beehive.svg), radial-gradient(200px 500px at center, @brand-secondary 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0));
+    	background-size: 100%, 50% 100%;
+    	background-position: 0 60%, 0 100%;
+    	-webkit-animation: move 5s linear infinite;
+    	animation: move 5s linear infinite;
+}
+
+@keyframes move {
+	0% {
+		background-position: 0 60%, 0 50%;
+	}
+	100% {
+		background-position: 0 60%, 100% 50%;
+	}
+}
+
+@-webkit-keyframes move {
+	0% {
+		background-position: 0 60%, 0 50%;
+	}
+	100% {
+		background-position: 0 60%, 100% 50%;
+	}
+}
+
+.jumbotron-about {
+	padding-top: 0;
+	background-color: lighten(@brand-primary, 80%);
+
+	h2 {
+		color: @brand-primary;
+		margin-bottom: 20px;
+		margin-top: 60px;
+		text-decoration: underline @brand-secondary;
+	}
+
+	h3 {
+		text-transform: uppercase;
+		color: @brand-primary;
+	}
+
+	span {
+		border-bottom: 3px solid @brand-secondary;
+	}
+
+	img {
+		margin-top: 40px;
+	}
+
+}
+
+/* Disable animate.css on small devices */
+@media only screen and (max-width : 768px) {
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+}
+
+
