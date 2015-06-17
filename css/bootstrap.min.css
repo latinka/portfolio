@@ -6725,6 +6725,10 @@ button.close {
 .jumbotron-about img {
   margin-top: 40px;
 }
+.jumbotron-about .col-sm-4 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
 /* Disable animate.css on small devices */
 @media only screen and (max-width: 768px) {
   .animated {
